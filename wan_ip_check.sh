@@ -47,6 +47,7 @@ do
       echo "$WAN_IP" > "$ip_file"
       echo "Sending Pushover notification..."
       MESSAGE="Network configuration change warning! The IP address is now $WAN_IP."
+      send=`curl -s -F "token=$pushover_token" -F "user=$pushover_user" -F "title=$TITLE" -F "message=$MESSAGE" -F "priority=$priority" -F "sound=$sound" -F "html=1" $pushover_api`
    fi
 
 done < "$ip_file"
