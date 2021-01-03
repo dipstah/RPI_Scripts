@@ -8,6 +8,9 @@
 #Author         :Mike White
 #Email         	:dipstah@dippydawg.net
 ###################################################################
+#ask for IP address to router
+echo please enter the IP address to the router.
+read ipaddress
 
 #install packages
 sudo apt-get install watchdog chkconfig
@@ -15,6 +18,7 @@ sudo apt-get install watchdog chkconfig
 #update config files
 sudo sed -i "s|#watchdog-device|watchdog-device|g" /etc/watchdog.conf
 sudo sed -i "s|#max-load-1|max-load-1|g" /etc/watchdog.conf
+sudo sed -i "1 i\ping                   = $ipaddress" /etc/watchdog.conf
 
 echo bcm2835_wdt | sudo tee -a /etc/modules
 echo bcm2835_wdt | sudo tee /etc/modules-load.d/bcm2835_wdt.conf
