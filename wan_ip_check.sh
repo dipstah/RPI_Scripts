@@ -8,10 +8,26 @@
 #Author         :Mike White
 #Email          :dipstah@dippydawg.net
 ###################################################################
-TITLE="Public IP address has changed"
+
+# POST an HTTPS request API https://pushover.net/api
+pushover_api="https://api.pushover.net/1/messages.json"
+
+# (required) - your application's API token
+pushover_token="a43fznj6izfjiostn1wvjmg73jyze3"
+
+# (required) - the user/group key (not e-mail address) of your user (or you)
+pushover_user="u2wAkjLutj1S8qFBif1qZ83ALy7cJk"
+
+#pushover priority https://pushover.net/api#priority
+priority="1"
+
+#pushover sound to play https://pushover.net/api#sounds
+sound="siren"
+
 ip_file="/home/pi/scripts/wan_ip/wan_ip.txt"
 
 WAN_IP=`curl ifconfig.me/ip`
+TITLE="Public IP address has changed"
 
 if [ ! -f "$ip_file" ] ; then
    touch "$ip_file"
@@ -31,7 +47,6 @@ do
       echo "$WAN_IP" > "$ip_file"
       echo "Sending Pushover notification..."
       MESSAGE="Network configuration change warning! The IP address is now $WAN_IP."
-     ~/scripts/pushover/pushover.py "$TITLE" "$MESSAGE" "1"
    fi
 
 done < "$ip_file"
