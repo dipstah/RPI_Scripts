@@ -13,10 +13,10 @@
 pushover_api="https://api.pushover.net/1/messages.json"
 
 # (required) - your application's API token
-pushover_token="a43fznj6izfjiostn1wvjmg73jyze3"
+pushover_token="TOKENHERE"
 
 # (required) - the user/group key (not e-mail address) of your user (or you)
-pushover_user="u2wAkjLutj1S8qFBif1qZ83ALy7cJk"
+pushover_user="USERTOKENHERE"
 
 #pushover priority https://pushover.net/api#priority
 priority="1"
