@@ -1,0 +1,8 @@
+sudo sed -i "s|#watchdog-device|watchdog-device|g" /etc/watchdog.conf
+sudo sed -i "s|#max-load-1|max-load-1|g" /etc/watchdog.conf
+
+echo bcm2835_wdt | sudo tee -a /etc/modules
+echo bcm2835_wdt | sudo tee /etc/modules-load.d/bcm2835_wdt.conf
+
+chkconfig watchdog on
+sudo /etc/init.d/watchdog start
