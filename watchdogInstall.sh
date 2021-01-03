@@ -19,6 +19,7 @@ sudo apt-get install watchdog chkconfig
 sudo sed -i "s|#watchdog-device|watchdog-device|g" /etc/watchdog.conf
 sudo sed -i "s|#max-load-1|max-load-1|g" /etc/watchdog.conf
 sudo sed -i "1 i\ping                   = $ipaddress" /etc/watchdog.conf
+sudo sed -i '/watchdog-device/a watchdog-timeout = 15' /etc/watchdog.conf
 
 echo bcm2835_wdt | sudo tee -a /etc/modules
 echo bcm2835_wdt | sudo tee /etc/modules-load.d/bcm2835_wdt.conf
