@@ -14,6 +14,7 @@ read ipaddress
 
 #install packages
 sudo apt-get install watchdog chkconfig
+sudo update-rc.d watchdog defaults
 
 #update config files
 sudo sed -i "s|#watchdog-device|watchdog-device|g" /etc/watchdog.conf
