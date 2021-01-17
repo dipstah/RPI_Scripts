@@ -3,7 +3,10 @@
 #Script Name    : setupKiosk.sh
 #Description  :Setup Kiosk on raspberry Pi
 # to run script
-#  wget -O - https://raw.githubusercontent.com/dipstah/RPI_Scripts/main/kiosk/setupkiosk.sh | bash
+#  wget -O - https://raw.githubusercontent.com/dipstah/RPI_Scripts/main/kiosk/setupkiosk.sh > setupkiosk.sh
+#  chmod a+x setupkiosk.sh
+#  sudo ./setupkiosk.sh
+#
 # Requirements
 # • Raspberry Pi OS Lite
 # • fresh image will work best
