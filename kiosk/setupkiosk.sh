@@ -2,7 +2,14 @@
 ###################################################################
 #Script Name    : setupKiosk.sh
 #Description  :Setup Kiosk on raspberry Pi
-#
+# Requirements
+# • Raspberry Pi OS Lite
+# • fresh image will work best
+# • raspberry Pi 3/4
+# • SD card
+# • display screen touch capible
+# • optional keyboard/mouse
+# • network access
 #https://github.com/dipstah/
 #
 #Author         :Mike White
