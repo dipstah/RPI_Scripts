@@ -70,7 +70,7 @@ xset s noblank
 
 unclutter &
 chromium-browser $url \\
---window-size=1020,600 \\
+--window-size=$res \\
 --window-position=0,0 \\
 --start-fullscreen \\
 --kiosk \\
