@@ -1,3 +1,14 @@
+#!/bin/bash
+###################################################################
+#Script Name	: setupKiosk.sh
+#Description  :Setup Kiosk on raspberry Pi
+#                
+#https://github.com/dipstah/
+#
+#Author         :Mike White
+#Email         	:dipstah@dippydawg.net
+###################################################################
+
 
 #Install Raspberry Pi OS Lite
 #this is a minimal setup for the Kiosk no need for all the other software just x11 and chromium. 
