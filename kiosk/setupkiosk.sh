@@ -41,6 +41,15 @@ function install() {
    printf "\n\n\n\n"
    read -p "Whats the URL to point Chromium to? : " url
    
+   #ask for screen resolution default to 1920,180
+   printf "\n\n"
+   read -p "Whats resolution is your display? default=1920,1080 : " res
+   if [[ $res -eq ""]]
+   then
+      res="1920,1080"
+   else
+   fi
+   
 cat > $home/.bash_profile <<EOL
 #Start X11 if console 
 if [ -z \$DISPLAY ] && [ \$(tty) = /dev/tty1 ]
