@@ -1,4 +1,13 @@
+#!/bin/bash
+###################################################################
+#Script Name    : wg_client.sh
+#Description  : create client config for wireguard
+# This is a semi working script. Ip's need to manylly be changed will update when I have time. 
+#https://github.com/dipstah/
 #
+#Author         :Mike White
+#Email          :dipstah@dippydawg.net
+####################################################################
 #key path
 keypath="/etc/wireguard/keys"
 clientpath="/etc/wireguard/clients"
