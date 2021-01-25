@@ -50,7 +50,8 @@ function install() {
    if [ -z "$res" ]
      then
         res="1920,1080"
-     else 
+     else
+        echo "$res"
    fi
    
 cat > $home/.bash_profile <<EOL
